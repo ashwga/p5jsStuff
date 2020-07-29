@@ -10,6 +10,8 @@ function setup() {
 
 function draw() {
     background(0);
+    fill(255);
+    text("You can apply wind force when clicking mouse.\nYou can move objects up with any key.", 0, 10);
     mover1.update();
     mover2.update();
     mover1.show();
@@ -20,8 +22,9 @@ function draw() {
 }
 
 function mousePressed() {
-    mover1.applyForce(createVector(1, 0))
-    mover2.applyForce(createVector(1, 0))
+    let wind = createVector(1, 0);
+    mover1.applyForce(wind);
+    mover2.applyForce(wind);
 }
 
 function keyPressed() {
